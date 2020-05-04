@@ -64,7 +64,7 @@ option(COVERALLS "Generate coverage data" OFF)
 option(COVERALLS_UPLOAD "Upload the generated coveralls json" OFF)
 
 # dependencies
-find_package(Boost 1.46.0 COMPONENTS unit_test_framework REQUIRED)
+find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
 
 # code coverage
