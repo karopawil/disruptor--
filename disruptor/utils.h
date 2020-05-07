@@ -54,6 +54,9 @@ inline void SpinPause() {
   __asm__ __volatile__("rd %ccr,%g0");
   __asm__ __volatile__("rd %ccr,%g0");
 
+#elif defined(__arm__) || defined(__aarch64__) || defined (_M_ARM) || defined(_M_ARM64)
+  __asm__ __volatile__("yield")
+
 #elif defined(_MSC_VER)
 
   YieldProcessor();
